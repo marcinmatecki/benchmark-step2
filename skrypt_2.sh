@@ -12,10 +12,10 @@ fi
 CLONE_DIR="$HOME/hdmapping-benchmark"
 
 if [ ! -d "$CLONE_DIR" ]; then
-    echo "Tworzę katalog $CLONE_DIR..."
+    echo "Creating directory $CLONE_DIR..."
     mkdir -p "$CLONE_DIR"
 else
-    echo "Katalog $CLONE_DIR już istnieje, pomijam tworzenie."
+    echo "Directory $CLONE_DIR already exists, skipping creation."
 fi
 
 cd "$CLONE_DIR" || exit
@@ -111,6 +111,7 @@ ROS2_ALGOS=(
   "glim"
   "resple"
   "lidar_odometry_ros_wrapper"
+  "mola"
 )
 
 for i in "${!ROS1_ALGOS[@]}"; do
